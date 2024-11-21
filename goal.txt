@@ -21,5 +21,3 @@ base64 okunur hale gelicek
 okunur hale gelen base64 front ende gönderilecek
 
 okunabilir stringin prefixleri alınıp text ona göre renklendirilecek
-
-I'm building a website for displaying SkyBlock profiles and calculating damage and DPS based on user inventory items. The site shows users inventory, skills, and other statistics. The primary goal is to calculate the total damage and DPS based on the user's current equipment. I need the API key to fetch player data from the game's API and perform accurate calculations.

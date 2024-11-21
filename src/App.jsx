@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./css/Home.css"
 import axios from 'axios';
 import Data from "./js/pull.mjs"
 import painter from "./js/painter.js"
 import measuring from "./js/measure.js"
 const API_KEY = process.env.REACT_APP_API_KEY;
+const PORT = process.env.PORT || 3000
 const inventoryPaths = [
     "backpack_icons",
     "quiver", "talisman_bag",
