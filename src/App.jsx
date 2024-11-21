@@ -6,6 +6,7 @@ import painter from "./js/painter.js"
 import measuring from "./js/measure.js"
 import paths from "./js/paths.js"
 const API_KEY = process.env.REACT_APP_API_KEY
+const PORT = process.env.PORT
 
 function App() {
     const [profiles, setprofiles] = useState(null);
@@ -47,7 +48,7 @@ function App() {
 
         measuring(base64Object)
 
-        const response = await axios.post('http://localhost:5000/select',
+        const response = await axios.post(`http://localhost:${PORT}/select`,
             { base64Object: base64Object })
             .then(res => res.data.data)
             .catch(err => console.log(err))
@@ -65,16 +66,14 @@ function App() {
 
     return (
         <>
-            <span>
-                <input
-                    id="nick"
-                    type="text"
-                    name="nick"
-                    placeholder="Username"
-                    defaultValue="Mehmo"
-                    onChange={(e) => pullPlayer(e)}
-                />
-            </span>
+            <input
+                id="nick"
+                type="text"
+                name="nick"
+                placeholder="Username"
+                defaultValue="Mehmo"
+                onChange={(e) => pullPlayer(e)}
+            />
             <select id="profiles" name="profiles" onChange={(e) => profileSelect(e.target.value)} defaultValue="-1">
                 <option disabled value="-1" className='profile'>
                     Profile
