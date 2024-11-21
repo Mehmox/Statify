@@ -2,7 +2,6 @@
   "name": "statify",
   "version": "0.1.0",
   "private": true,
-  "main": "index.js",
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint": "^8.57.1",
@@ -23,12 +22,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "concurrently \"nodemon index.js\" \"npm start\"",
-    "server": "node index.js",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "concurrently \"nodemon index.js\" \"react-scripts start\"",
+    "start": "node index.js",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [

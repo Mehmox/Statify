@@ -1,0 +1,58 @@
+* {
+    font-size: 35px;
+    text-align: center;
+    color: rgb(95, 250, 48);
+    margin: 0;
+}
+
+span {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+select,
+input,
+button {
+    height: 1.9rem;
+    border: solid white 1px;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+input:hover,
+button:hover,
+select:hover {
+    border-radius: 0.6rem;
+}
+
+input {
+    width: 10rem;
+}
+
+#key {
+    width: 13rem;
+}
+
+#submit {
+    width: 3rem;
+}
+
+#nick {
+    width: 9rem;
+}
+
+#profiles {
+    width: 7rem;
+    color: grey;
+}
+
+.display {
+    font-size: 2px;
+}
