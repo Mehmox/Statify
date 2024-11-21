@@ -1,0 +1,33 @@
+Hypixel damage gösterirken zemine yuvarlıyor math.floor(damage)
+
+OFA: Bütün enchleri kaldırıp 5 ench çarpanı veriyor yani 5 tane first strike IV eklemek yada 125 combat lvl eklemek gibi
+
+Ender Dragon: 
+Ability damage i de %10 arttırıyor,
+Endermane karşı 200 enchant ekliyor
+
+Bestiary: Islanda bestiary çalışmıyor
+
+Giant killer: 
+Düşmanın canı azaldıkça etkisi azalmıyor hep aynı
+(Düşününce emin olamadım tekrar test etmem lazım 
+belkide mobun canı profilin canından çok fazla olduğu için hep max gözüküyor)
+
+Gdrag Dragon's Greed: her 5 magic finda %0.5 strg veriyo max %5 e kadar
+
+Soul eater: 
+Mobu öldürüp soulunu aldıktan sonra sadece kritik vuruşlarda çalışır,
+dmg=(mobdmg*selvl*2) * (1 + Crit_Damage / 100)
+
+Berserk buff: effective 1.5x veriyor
+
+Petin %lik stat buffı ayrı mayorların ayrı hesaplanıynıyor çarpılıyor
+
+Sıkıntı talismanlar:
+Reaper orb 
+Gravity talisman
+Bluetooth Ring
+Day Crystal
+Night Crystal
+Tarantula talisman
+Ring Of love
