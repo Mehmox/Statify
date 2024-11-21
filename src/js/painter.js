@@ -30,21 +30,25 @@ function applyColorSpan(code, text) {
     return `<span style="color: ${color}">${text}</span>`
 }
 
+let result = {};
 const prefix = "§"
-function checkSlots(storageSlot) {//Code spagetti here I need to make it more readble
+function checkSlots(storageSlot, storageName, index) {//Code spagetti here I need to make it more readble
     try {
         storageSlot = storageSlot.tag.value.display.value.Lore.value.value
         storageSlot.forEach(itemDisplayArray => {//LOOP
             let displayStringIndex = 0;
             let string = ""
+            if (itemDisplayArray[0] === " ")
+                itemDisplayArray = itemDisplayArray.slice(1)
             while (displayStringIndex < itemDisplayArray.length) {//LOOP
                 if (itemDisplayArray[displayStringIndex] === prefix) {
                     const code = itemDisplayArray[displayStringIndex + 1];
 
-                    const nextSectionIndex = itemDisplayArray.indexOf(prefix, displayStringIndex + 1);
+                    const nextSectionIndex = itemDisplayArray.indexOf(prefix, displayStringIndex + 2);
                     const text = nextSectionIndex !== -1
                         ? itemDisplayArray.slice(displayStringIndex + 2, nextSectionIndex)
                         : itemDisplayArray.slice(displayStringIndex + 2);
+
                     string += applyColorSpan(code, text)
 
                     displayStringIndex = nextSectionIndex !== -1 ? nextSectionIndex : itemDisplayArray.length;
@@ -53,7 +57,7 @@ function checkSlots(storageSlot) {//Code spagetti here I need to make it more re
                     string += itemDisplayArray[displayStringIndex]
                 }
             }
-            return string
+            result[storageName][index].push(string)
         });
     } catch (error) {
         if (error.name === "TypeError")
@@ -63,13 +67,13 @@ function checkSlots(storageSlot) {//Code spagetti here I need to make it more re
     }
 }
 export default function painter(storageObject) {
-    let result = {};;//reset
+    result = {};//reset
     for (const storageName in storageObject) {//LOOP
         result[storageName] = []//set path
         let storage = storageObject[storageName].value.i.value.value
         storage.forEach((storageSlot, index) => {//LOOP
             result[storageName][index] = []//set path deep
-            result[storageName][index].push(checkSlots(storageSlot))
+            checkSlots(storageSlot, storageName, index)
         });
     }
     return result;

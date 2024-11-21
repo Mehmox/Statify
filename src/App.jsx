@@ -84,7 +84,6 @@ function App() {
                 {formatedDisplays && formatedDisplays.map((item, index) => (
                     item.map((rowtext, rowIndex) => (
                         < p key={`${index}-${rowIndex}`}>{rowtext}</p>
-                        // console.log(rowtext)
                     ))
                 ))}
             </div >
