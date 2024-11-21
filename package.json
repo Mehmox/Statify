@@ -2,6 +2,7 @@
   "name": "qhypixel",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint": "^8.57.1",

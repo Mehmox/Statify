@@ -6,7 +6,10 @@ const targetPath = [
     "inv_contents",
     "wardrobe_contents"
 ]
-const all = [
+
+export default targetPath
+
+/*
     "backpack_contents",
     "backpack_icons",
     "bag_contents.fishing_bag", "bag_contents.potion_bag", "bag_contents.quiver", "bag_contents.sacks_bag", "bag_contents.talisman_bag",
@@ -17,6 +20,4 @@ const all = [
     "personal_vault_contents",
     "sacks_counts",
     "wardrobe_contents"
-]
-
-export default targetPath
+*/
