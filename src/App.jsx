@@ -82,10 +82,10 @@ function App() {
             </select>
             <div className='display'>
                 {formatedDisplays && formatedDisplays.map((item, index) => (
-                    item.map((rowtext, rowIndex) => {
+                    item.map((rowtext, rowIndex) => (
                         < p key={`${index}-${rowIndex}`}>{rowtext}</p>
                         // console.log(rowtext)
-                    })
+                    ))
                 ))}
             </div >
         </>

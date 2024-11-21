@@ -30,9 +30,8 @@ function applyColorSpan(code, text) {
     return `<span style="color: ${color}">${text}</span>`
 }
 
-let result = {};
 const prefix = "§"
-function checkSlots(storageSlot, storageName, index) {//Code spagetti here I need to make it more readble
+function checkSlots(storageSlot) {//Code spagetti here I need to make it more readble
     try {
         storageSlot = storageSlot.tag.value.display.value.Lore.value.value
         storageSlot.forEach(itemDisplayArray => {//LOOP
@@ -54,7 +53,7 @@ function checkSlots(storageSlot, storageName, index) {//Code spagetti here I nee
                     string += itemDisplayArray[displayStringIndex]
                 }
             }
-            result[storageName][index].push(string)
+            return string
         });
     } catch (error) {
         if (error.name === "TypeError")
@@ -64,13 +63,13 @@ function checkSlots(storageSlot, storageName, index) {//Code spagetti here I nee
     }
 }
 export default function painter(storageObject) {
-    result = {};//reset
+    let result = {};;//reset
     for (const storageName in storageObject) {//LOOP
         result[storageName] = []//set path
         let storage = storageObject[storageName].value.i.value.value
         storage.forEach((storageSlot, index) => {//LOOP
             result[storageName][index] = []//set path deep
-            checkSlots(storageSlot, storageName, index)
+            result[storageName][index].push(checkSlots(storageSlot))
         });
     }
     return result;
