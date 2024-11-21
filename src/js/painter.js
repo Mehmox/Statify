@@ -24,7 +24,7 @@ const colorMapRGB = {
 };
 
 function applyColorSpan(code, text) {
-    if (text.length == 0)
+    if (text.length === 0)
         return ""
     const color = colorMapRGB[code] !== "k" ? colorMapRGB[code] : "grey"
     return `<span style="color: ${color}">${text}</span>`

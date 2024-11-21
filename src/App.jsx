@@ -4,28 +4,9 @@ import axios from 'axios';
 import Data from "./js/pull.mjs"
 import painter from "./js/painter.js"
 import measuring from "./js/measure.js"
+import pullPaths from "./js/path.js"
 const API_KEY = process.env.REACT_APP_API_KEY;
-const PORT = process.env.PORT || 3000
-const inventoryPaths = [
-    "backpack_icons",
-    "quiver", "talisman_bag",
-    "equipment_contents",
-    "inv_armor",
-    "inv_contents",
-    "wardrobe_contents"
-]
-const all = [
-    "backpack_contents",
-    "backpack_icons",
-    "bag_contents.fishing_bag", "bag_contents.potion_bag", "bag_contents.quiver", "bag_contents.sacks_bag", "bag_contents.talisman_bag",
-    "ender_chest_contents",
-    "equipment_contents",
-    "inv_armor",
-    "inv_contents",
-    "personal_vault_contents",
-    "sacks_counts",
-    "wardrobe_contents"
-]
+
 function App() {
     const [profiles, setprofiles] = useState(null);
     const [APIDATA, setAPIDATA] = useState(null);
@@ -52,14 +33,12 @@ function App() {
     }
 
     const profileSelect = async (id) => {
-        if (id == -1)
+        if (id === -1)
             return
         let base64Object = {}
-        // APIDATA[id].members[Puuid].inventory.personal_vault_contents.data
-        // console.log(APIDATA[id].members[Puuid])
 
-        inventoryPaths.forEach(path => {
-            if (path == "quiver" || path == "talisman_bag")
+        pullPaths.forEach(path => {
+            if (path === "quiver" || path === "talisman_bag")
                 base64Object[path] = APIDATA[id].members[Puuid].inventory.bag_contents[path].data
             else
                 base64Object[path] = APIDATA[id].members[Puuid].inventory[path].data
@@ -79,11 +58,6 @@ function App() {
         let testvar = painter(response)
         setDisplays(testvar)
         console.log(testvar)
-
-        /*
-    console.log(APIBD[1].members[uuidd].inventory);
-    console.log(APIBD[1].members[uuidd].rift.inventory.backpack_contents.data);
-        */
     }
 
     return (

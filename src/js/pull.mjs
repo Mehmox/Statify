@@ -15,6 +15,6 @@ export default async function Data(key, nick) {
             return dataObject
         })
         .catch(err => {
-            err.status == "403" ? console.log("key expired") : console.log(err)
+            err.status === "403" ? console.log("key expired") : console.log(err)
         })
 }
