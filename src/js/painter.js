@@ -57,7 +57,7 @@ function checkSlots(storageSlot, storageName, index) {//Code spagetti here I nee
             result[storageName][index].push(string)
         });
     } catch (error) {
-        if (error.name == "TypeError")
+        if (error.name === "TypeError")
             console.log("maybe its empty slot or it is not a combat item")
         else
             console.log(error)
