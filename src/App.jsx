@@ -6,7 +6,8 @@ import painter from "./js/painter.js"
 import measuring from "./js/measure.js"
 import paths from "./js/paths.js"
 const API_KEY = process.env.REACT_APP_API_KEY
-const PORT = process.env.PORT
+const PORT = process.env.REACT_APP_PORT
+console.log(PORT)
 
 function App() {
     const [profiles, setprofiles] = useState(null);
