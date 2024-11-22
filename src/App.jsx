@@ -14,7 +14,6 @@ function App() {
     const [Puuid, setPuuid] = useState(null);
     const [displays, setDisplays] = useState(null);
     let formatedDisplays = []
-    console.log(displays)
     if (displays)
         for (const key in displays)
             displays[key].forEach(row => formatedDisplays.push(row))
@@ -54,6 +53,7 @@ function App() {
             .then(res => res.data.data)
             .catch(err => console.log(err))
 
+        console.log(response)
         let testvar = textFormater(response)
         setDisplays(testvar)
         // console.log(testvar)

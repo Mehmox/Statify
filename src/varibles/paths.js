@@ -1,11 +1,11 @@
 const targetPaths = [
     "personal_vault_contents",
-    "backpack_icons",
-    "quiver", "talisman_bag",
-    "equipment_contents",
-    "inv_armor",
-    "inv_contents",
-    "wardrobe_contents"
+    // "backpack_icons",
+    // "quiver", "talisman_bag",
+    // "equipment_contents",
+    // "inv_armor",
+    // "inv_contents",
+    // "wardrobe_contents"
 ]
 export default targetPaths
 /* all paths
