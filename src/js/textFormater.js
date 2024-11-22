@@ -1,28 +1,4 @@
-const colorMapRGB = {
-    '0': 'rgb(0, 0, 0)',         // black
-    '1': 'rgb(0, 0, 139)',       // darkblue
-    '2': 'rgb(0, 100, 0)',       // darkgreen
-    '3': 'rgb(0, 139, 139)',     // darkaqua
-    '4': 'rgb(139, 0, 0)',       // darkred
-    '5': 'rgb(128, 0, 128)',     // darkpurple
-    '6': 'rgb(255, 215, 0)',     // gold
-    '7': 'rgb(169, 169, 169)',   // gray
-    '8': 'rgb(169, 169, 169)',   // darkgray (same as gray)
-    '9': 'rgb(0, 0, 255)',       // blue
-    'a': 'rgb(0, 128, 0)',       // green
-    'b': 'rgb(0, 255, 255)',     // aqua
-    'c': 'rgb(255, 0, 0)',       // red
-    'd': 'rgb(204, 0, 204)',     // lightpurple
-    'e': 'rgb(255, 255, 0)',     // yellow
-    'f': 'rgb(255, 255, 255)',   // white
-    'k': 'random',               // Rastgele karakter için ekstra işleme yapılabilir
-    'l': 'bold',                 // text style
-    'm': 'line-through',         // text style
-    'n': 'underline',            // text style
-    'o': 'italic',               // text style
-    'r': 'reset'                 // text style
-};
-
+import colorMapRGB from "../varibles/colorMapRGB.js"
 function applyColorSpan(code, text) {
     if (text.length === 0)
         return ""
@@ -32,14 +8,17 @@ function applyColorSpan(code, text) {
 
 let result = {};
 const prefix = "§"
-function checkSlots(storageSlot, storageName, index) {
+function checkSlots(item, storageName, index) {
     try {
-        storageSlot = storageSlot.tag.value.display.value.Lore.value.value
-        storageSlot.forEach(itemDisplayArray => {//LOOP
+        const Name = item.tag.value.display.value.Name.value
+        item = item.tag.value.display.value.Lore.value.value
+
+        item.unshift(Name)//adding item name to item info array
+        item.forEach(itemDisplayArray => {//LOOP
             let displayStringIndex = 0;
             let string = ""
 
-            if (itemDisplayArray[displayStringIndex] === " ")
+            if (itemDisplayArray[displayStringIndex] === " ")//if first index is " " need to remove cause to js can detect prefix
                 itemDisplayArray = itemDisplayArray.slice(1)
 
             while (displayStringIndex < itemDisplayArray.length) {//LOOP
@@ -72,9 +51,9 @@ export default function painter(storageObject) {
     for (const storageName in storageObject) {//LOOP
         result[storageName] = []//set path
         let storage = storageObject[storageName].value.i.value.value
-        storage.forEach((storageSlot, index) => {//LOOP
+        storage.forEach((item, index) => {//LOOP
             result[storageName][index] = []//set path deep
-            checkSlots(storageSlot, storageName, index)
+            checkSlots(item, storageName, index)
         });
     }
     return result;

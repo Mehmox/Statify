@@ -1,18 +1,13 @@
-* {
+html {
     font-size: 35px;
-    text-align: center;
+}
+
+* {
     color: rgb(95, 250, 48);
     margin: 0;
 }
 
-span {
-    font-family: "Montserrat", sans-serif;
-}
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: black;
 }
@@ -24,6 +19,8 @@ button {
     border: solid white 1px;
     box-sizing: border-box;
     background-color: black;
+    text-align: center;
+    font-size: 1rem;
 }
 
 input:hover,
@@ -32,20 +29,14 @@ select:hover {
     border-radius: 0.6rem;
 }
 
-input {
-    width: 10rem;
+div {
+    text-align: center;
 }
 
-#key {
-    width: 13rem;
-}
-
-#submit {
-    width: 3rem;
-}
-
-#nick {
-    width: 9rem;
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #profiles {
@@ -54,5 +45,8 @@ input {
 }
 
 .display {
-    font-size: 2px;
+    font-size: 0.5rem;
+    text-align: left;
+    width: 5rem;
+    display: block;
 }

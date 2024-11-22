@@ -1,4 +1,5 @@
 const targetPaths = [
+    "personal_vault_contents",
     "backpack_icons",
     "quiver", "talisman_bag",
     "equipment_contents",
@@ -7,7 +8,7 @@ const targetPaths = [
     "wardrobe_contents"
 ]
 export default targetPaths
-/*
+/* all paths
 "backpack_contents",
     "backpack_icons",
     "bag_contents.fishing_bag", "bag_contents.potion_bag", "bag_contents.quiver", "bag_contents.sacks_bag", "bag_contents.talisman_bag",
