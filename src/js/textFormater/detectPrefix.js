@@ -25,8 +25,7 @@ function detectPrefix(displayArray, displayArrIndex) {
                 : displayArray.slice(displayArrIndex);
 
             displayArrIndex = nextPrefixIndex !== -1 ? nextPrefixIndex : displayArray.length;
-            if (code.length > 3)
-                console.log(code, nextPrefixIndex, text)
+
             formatedString += spanMaker(code, text)
         }
     }

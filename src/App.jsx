@@ -6,7 +6,7 @@ import textFormater from "./js/textFormater/openObject.js"
 import measuring from "./js/measure.js"
 import targetPaths from "./varibles/paths.js"
 const API_KEY = process.env.REACT_APP_API_KEY
-const PORT = process.env.REACT_APP_PORT
+const URL = process.env.REACT_APP_URL
 
 function App() {
     const [profiles, setprofiles] = useState(null);
@@ -48,15 +48,13 @@ function App() {
 
         measuring(base64Object)
 
-        const response = await axios.post(`http://localhost:${PORT}/select`,
+        const response = await axios.post(`${URL}/select`,
             { base64Object: base64Object })
             .then(res => res.data.data)
             .catch(err => console.log(err))
 
         // console.log(response["personal_vault_contents"].value.i.value.value[1].tag.value.display.value.Lore.value.value)
-        let testvar = textFormater(response)
-        setDisplays(testvar)
-        console.log(testvar)
+        setDisplays(textFormater(response))
     }
 
     return (
