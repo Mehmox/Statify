@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./css/Home.css"
 import axios from 'axios';
 import Data from "./js/pull.mjs"
-import textFormater from "./js/textFormater.js"
+import textFormater from "./js/textFormater/openObject.js"
 import measuring from "./js/measure.js"
 import targetPaths from "./varibles/paths.js"
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -53,10 +53,10 @@ function App() {
             .then(res => res.data.data)
             .catch(err => console.log(err))
 
-        console.log(response)
+        // console.log(response["personal_vault_contents"].value.i.value.value[1].tag.value.display.value.Lore.value.value)
         let testvar = textFormater(response)
         setDisplays(testvar)
-        // console.log(testvar)
+        console.log(testvar)
     }
 
     return (

@@ -31,6 +31,8 @@ select:hover {
 
 div {
     text-align: center;
+    font-family: "Montserrat", Arial;
+    font-weight: 500;
 }
 
 section {
