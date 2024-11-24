@@ -10,7 +10,7 @@ Clone the repository using `git clone https://github.com/Mehmox/Statify.git`, th
 Install the required dependencies by running `npm install`.  
 Create `.env` file with the same depth as json file and add the following content:
 
-`REACT_APP_API_KEY=<your_api_key>`  
+`REACT_APP_HYPIXEL_API_KEY=<your_api_key>`  
 `REACT_APP_URL=http://localhost:5000`.
 
 if you dont have api key you can get temporary key from here [Hypixel Dashboard](https://developer.hypixel.net/dashboard)
