@@ -5,5 +5,5 @@ export default function measure(data) {
     const jsonSizeInBytes = new TextEncoder().encode(jsonString).length;
     const jsonSizeInKB = (jsonSizeInBytes / 1024).toFixed(2); // KB cinsinden boyut
 
-    // console.log(`JSON data size: ${jsonSizeInKB} KB`);
+    console.log(`JSON data size: ${jsonSizeInKB} KB`);
 }

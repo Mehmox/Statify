@@ -49,5 +49,8 @@ section {
 .display {
     font-size: 0.5rem;
     text-align: left;
-    display: block;
+}
+
+p {
+    width: 400px;
 }

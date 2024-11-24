@@ -1,4 +1,5 @@
 import axios from "axios"
+
 async function uuid(nick) {
     return axios.get(`https://playerdb.co/api/player/minecraft/${nick ? nick : "Mehmox"}`)
         .then(res => res.data.data.player.raw_id)

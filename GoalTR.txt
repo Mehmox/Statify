@@ -1,0 +1,24 @@
+npm i axios concurrently cors express prismarine-nbt react
+npm i nodemon --save-dev
+
+"scripts": {
+  "dev": "concurrently \"nodemon index.js\" \"react-scripts start\"",
+  "start": "node index.js",
+  "build": "react-scripts build"
+},
+
+front-endde nick al
+
+hypixel datasını çek
+
+çekilden datanın profil sayısını al
+
+hangi profilin hesaplanacağını seçtir
+
+seçilen profilin base64 datasını back-endde gönder
+
+base64ü okunur hale getir
+
+okunur hale gelen base64 front-ende gönder
+
+okunabilir stringin prefixleri al renk kodlarına göre renklendir
