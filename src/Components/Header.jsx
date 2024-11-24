@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-import Data from "./js/pull.mjs"
-import textFormater from "./js/textFormater/openObject.js"
-import measuring from "./js/measure.js"
-import targetPaths from "./varibles/paths.js"
+import Data from "../js/pull.mjs"
+import measuring from "../js/measure.js"
+import targetPaths from "../varibles/paths.js"
 
-const API_KEY = process.env.REACT_APP_API_KEY
+const API_KEY = process.env.REACT_APP_HYPIXEL_API_KEY
 const URL = process.env.REACT_APP_URL
 
 export default function Header({ setDisplays }) {
@@ -50,7 +49,7 @@ export default function Header({ setDisplays }) {
             .catch(err => console.log(err))
 
         // console.log(response["personal_vault_contents"].value.i.value.value[1].tag.value.display.value.Lore.value.value)
-        setDisplays(textFormater(response))
+        setDisplays(response)
     }
     return <div>
         <input
