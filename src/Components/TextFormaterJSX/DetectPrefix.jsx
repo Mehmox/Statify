@@ -46,14 +46,10 @@ export default function DetectPrefix({ itemString }) {
         }
     }
     return <>
-        {formatedStringInfo.map((info) =>
-            <SpanMaker
-                key={uuidv4()}
+        {formatedStringInfo.map(info =>//LOOP
+            <SpanMaker key={uuidv4()}
                 styleCodeArray={info.styleCodeArray}
                 text={info.text}
             />)}
     </>
 }
-
-
-

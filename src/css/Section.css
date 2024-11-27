@@ -1,0 +1,21 @@
+section {
+    border: 3px solid red;
+    height: 7rem;
+    background-color: black;
+}
+
+.content,
+.title {
+    margin-left: 20px;
+}
+
+.title {
+    text-decoration: underline rgb(27, 253, 27);
+}
+
+.content {
+    border: 3px dashed green;
+    color: black;
+    display: flex;
+    justify-items: center;
+}

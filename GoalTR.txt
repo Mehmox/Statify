@@ -1,4 +1,4 @@
-npm i axios concurrently cors express prismarine-nbt react
+npm i axios concurrently cors express prismarine-nbt react uuid
 npm i nodemon --save-dev
 
 "scripts": {

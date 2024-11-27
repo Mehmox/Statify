@@ -1,0 +1,35 @@
+Header {
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+Header select,
+input,
+button {
+    color: white;
+    height: 1.2rem;
+    box-sizing: border-box;
+    background-color: black;
+    font-size: 0.5rem;
+    border-radius: 1rem;
+    padding-left: 0.6rem;
+}
+
+Header img {
+    height: 0.7rem;
+    padding: 0.1rem;
+    border: 5px solid black;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.rem {
+    width: 4rem;
+}
+
+.gap {
+    height: 1.2rem;
+    background: rgb(57, 57, 57);
+}

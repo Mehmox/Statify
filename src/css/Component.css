@@ -1,0 +1,29 @@
+.item {
+    width: 2rem;
+    cursor: pointer;
+}
+
+.item img {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+}
+
+.item-info {
+    font-size: 19.3px;
+    text-align: left;
+    border: 2px solid rgb(28, 1, 66);
+    /*same as hypixel font size*/
+    visibility: hidden;
+    opacity: 0;
+    width: 400px;
+}
+
+.item:hover .item-info {
+    visibility: visible;
+    opacity: 1;
+}
+
+p {
+    width: 400px;
+}
