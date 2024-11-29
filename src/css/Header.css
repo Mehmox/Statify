@@ -3,6 +3,7 @@ Header {
     position: fixed;
     display: flex;
     justify-content: center;
+    background: rgb(57, 57, 57);
 }
 
 Header select,
@@ -10,26 +11,24 @@ input,
 button {
     color: white;
     height: 1.2rem;
-    box-sizing: border-box;
     background-color: black;
     font-size: 0.5rem;
     border-radius: 1rem;
-    padding-left: 0.6rem;
 }
 
-Header img {
-    height: 0.7rem;
-    padding: 0.1rem;
-    border: 5px solid black;
-    border-radius: 2rem;
-    cursor: pointer;
+Header input {
+    padding-left: 0.5rem;
 }
 
-.rem {
+Header select {
+    padding-left: 0.3rem;
     width: 4rem;
 }
 
-.gap {
+Header img {
     height: 1.2rem;
-    background: rgb(57, 57, 57);
+    padding: 0.26rem;
+    background-color: black;
+    border-radius: 2rem;
+    cursor: pointer;
 }

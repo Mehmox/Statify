@@ -9,11 +9,16 @@ import "./css/Component.css"
 import textureOptions from "./varibles/textures.js"
 
 import Header from './Components/Header.jsx';
+import Player from "./Components/Player.jsx"
 import Weapon from './Components/Weapon.jsx';
 
 import Section from './Components/Section.jsx';
 
 export default function App() {
+    const [APIDATA, setAPIDATA] = useState(null);
+    const [nick, setNICK] = useState(null);
+    const [Puuid, setPuuid] = useState(null);
+    const [profiles, setprofiles] = useState(null);
     const [display, setDisplays] = useState(null);
     const [texture, setTexture] = useState(0);
     const sections = [
@@ -23,8 +28,20 @@ export default function App() {
     ]
     // display && console.log(display)
     return <>
-        <Header setDisplays={setDisplays} setTexture={setTexture} />
-        <div className='gap'></div>
+        <Header
+            setNICK={setNICK}
+            setAPIDATA={setAPIDATA}
+            setPuuid={setPuuid}
+            setprofiles={setprofiles}
+            setTexture={setTexture}
+        />
+        <Player
+            nick={nick}
+            APIDATA={APIDATA}
+            Puuid={Puuid}
+            profiles={profiles}
+            setDisplays={setDisplays}
+        />
         <main>
             {display && sections.map(section => (display[section.target] &&
                 <Section key={uuidv4()} title={section.title}

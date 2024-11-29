@@ -17,6 +17,7 @@
     visibility: hidden;
     opacity: 0;
     width: 400px;
+    background-color: black;
 }
 
 .item:hover .item-info {
@@ -26,4 +27,12 @@
 
 p {
     width: 400px;
+}
+
+#player_profile {
+    margin-top: 2.2rem;
+    width: 70%;
+    height: 1.2rem;
+    float: right;
+    color: white;
 }

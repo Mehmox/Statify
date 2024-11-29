@@ -2,6 +2,7 @@ import ParagrafMaker from "./TextFormaterJSX/ParagrafMaker.jsx"
 import { v4 as uuidv4 } from 'uuid';
 
 export default function Weapon({ display, texture }) {//object extraction
+    // const customUrl = `./textures/${packName}/cit/item/${type}/${what}/${item}.png`
     function isAccessibleDeep(item) {
         try {
             let x = item.tag.value.display.value.Lore.value.value
@@ -12,7 +13,6 @@ export default function Weapon({ display, texture }) {//object extraction
         }
     }
     var url = "";
-    // const customUrl = `./textures/${packName}/cit/item/${type}/${what}/${item}.png`
     //opening all storages from inventory
     return <>
         {display.value.i.value.value.map(item => //LOOP
