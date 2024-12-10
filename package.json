@@ -12,9 +12,9 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.7",
-    "concurrently": "^9.1.0",
     "cors": "^2.8.5",
     "express": "^4.21.1",
+    "mongoose": "^8.8.3",
     "prismarine-nbt": "^2.6.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -23,9 +23,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "concurrently \"nodemon index.js\" \"react-scripts start\"",
+    "dev": "nodemon index.js && react-scripts start",
     "start": "node index.js",
-    "build": "react-scripts build"
+    "build": "npm install && react-scripts build"
   },
   "eslintConfig": {
     "extends": [
