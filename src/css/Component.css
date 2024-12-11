@@ -1,6 +1,8 @@
 .item {
     width: 2rem;
+    height: 2rem;
     cursor: pointer;
+    background-color: aqua;
 }
 
 .item img {
@@ -16,17 +18,17 @@
     /*same as hypixel font size*/
     visibility: hidden;
     opacity: 0;
-    width: 400px;
+    width: 500px;
     background-color: black;
 }
 
-.item:hover .item-info {
+.item img:hover+.item-info {
     visibility: visible;
     opacity: 1;
 }
 
 p {
-    width: 400px;
+    width: 500px;
 }
 
 #player_profile {

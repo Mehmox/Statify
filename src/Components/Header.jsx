@@ -5,19 +5,24 @@ import search from "../img/Search.png"
 
 const API_KEY = process.env.REACT_APP_HYPIXEL_API_KEY
 
-export default function Header({ setNICK, setAPIDATA, setPuuid, setprofiles, setTexture }) {
+export default function Header({ setPlayerInfo, setTexture }) {
     const pullPlayer = async () => {
         var indis = []
-        setNICK(document.querySelector("#nick").value)
+
         const pullReturn = await Data(API_KEY, document.querySelector("#nick").value)
 
-        setAPIDATA(pullReturn.APIDATA)
-        setPuuid(pullReturn.Puuid)
+        if (!pullReturn)
+            return
 
         for (let i = 0; i < pullReturn.APIDATA.length; i++)
             indis.push({ porfileID: i, name: pullReturn.APIDATA[i].cute_name })
 
-        setprofiles(indis)
+        setPlayerInfo({
+            nick: document.querySelector("#nick").value,
+            Puuid: pullReturn.Puuid,
+            profiles: indis,
+            APIDATA: pullReturn.APIDATA
+        })
     }
     return <header>
         <input

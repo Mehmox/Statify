@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "concurrently": "^9.1.0",
     "eslint": "^8.57.1",
     "nodemon": "^3.1.7"
   },
@@ -12,7 +13,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.7",
-    "concurrently": "^9.1.0",
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "prismarine-nbt": "^2.6.0",
@@ -23,9 +23,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "concurrently \"nodemon index.js\" \"react-scripts start\"",
+    "dev": "concurrently \"react-scripts start\" \"nodemon index.js\"",
     "start": "node index.js",
-    "build": "react-scripts build"
+    "build": "npm install && react-scripts build"
   },
   "eslintConfig": {
     "extends": [

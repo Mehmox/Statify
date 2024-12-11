@@ -1,27 +1,26 @@
 import ParagrafMaker from "./TextFormaterJSX/ParagrafMaker.jsx"
+import ItemFrame from "./ItemFrame.jsx"
 import { v4 as uuidv4 } from 'uuid';
 
 export default function Weapon({ display, texture }) {//object extraction
-    // const customUrl = `./textures/${packName}/cit/item/${type}/${what}/${item}.png`
     function isAccessibleDeep(item) {
         try {
             let x = item.tag.value.display.value.Lore.value.value
-            url = `./textures/${texture}/item/${"diamond_sword"}.png`
             return true
         } catch (error) {
+            console.log("item is not accessibleDeep")
             return false
         }
     }
-    var url = "";
     //opening all storages from inventory
     return <>
-        {display.value.i.value.value.map(item => //LOOP
+        {display.map(item => //LOOP
         //geting all single item in the storage
         (isAccessibleDeep(item) &&
             //every item has his own div*/
             <div key={uuidv4()}
                 className="item">
-                <img src={url} alt={`${texture}/${item} not found`} />
+                <ItemFrame item={item} src={item.id.value} texture={texture} />
                 <div key={uuidv4()}
                     className='item-info'>
                     <ParagrafMaker

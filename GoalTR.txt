@@ -1,10 +1,10 @@
-npm i axios concurrently cors express prismarine-nbt react uuid
-npm i nodemon --save-dev
+npm i axios cors express prismarine-nbt react uuid
+npm i nodemon concurrently --save-dev
 
 "scripts": {
-  "dev": "concurrently \"nodemon index.js\" \"react-scripts start\"",
+  "dev": "concurrently \"react-scripts start\" \"nodemon index.js\"",
   "start": "node index.js",
-  "build": "react-scripts build"
+  "build": "npm install && react-scripts build"
 },
 
 front-endde nick al

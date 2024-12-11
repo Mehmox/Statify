@@ -1,5 +1,5 @@
 const textureOptions = [
-    "Default",
+    "1.21",
     "Defrosted",
     "JICKLUS",
 ]
