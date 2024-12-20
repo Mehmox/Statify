@@ -8,11 +8,10 @@ export default function ParagrafMaker({ item }) {
         item.unshift(itemName)//adding item name to item info array
     return <>
         {item.map(itemString => //LOOP
-        (
-            itemString ?/*every paragraf basicly indis of itemdisplay array*/
-                <p key={uuidv4()}>
-                    < DetectPrefix itemString={itemString} />
-                </p> : <br key={uuidv4()} />
+        (itemString ?/*every paragraf basicly indis of itemdisplay array*/
+            <p key={uuidv4()} className="m-0" style={{ width: "500px" }}>
+                < DetectPrefix itemString={itemString} />
+            </p> : <br key={uuidv4()} />
         )
         )}
     </>

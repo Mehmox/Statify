@@ -1,17 +1,20 @@
-.item {
-    width: 2rem;
-    height: 2rem;
+.frame {
+    width: 75px;
+    height: 75px;
     cursor: pointer;
     background-color: aqua;
 }
 
-.item img {
+.item-image {
     width: 64px;
     height: 64px;
+    background-size: contain;
+    background-repeat: no-repeat;
     image-rendering: pixelated;
 }
 
 .item-info {
+    position: absolute;
     font-size: 19.3px;
     text-align: left;
     border: 2px solid rgb(28, 1, 66);
@@ -22,19 +25,7 @@
     background-color: black;
 }
 
-.item img:hover+.item-info {
+.frame:hover+.item-info {
     visibility: visible;
     opacity: 1;
-}
-
-p {
-    width: 500px;
-}
-
-#player_profile {
-    margin-top: 2.2rem;
-    width: 70%;
-    height: 1.2rem;
-    float: right;
-    color: white;
 }

@@ -1,34 +1,42 @@
-Header {
-    width: 100vw;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    background: rgb(57, 57, 57);
+.nav-in {
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 500px;
+    height: 36px;
+    border-radius: 18px;
 }
 
-Header select,
-input,
-button {
+.nav-in input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: 0;
+    border: 0;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    padding: 0 65px 0 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-weight: 600;
+    transition: background-color .1s;
     color: white;
-    height: 1.2rem;
-    background-color: black;
-    font-size: 0.5rem;
-    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, .2);
 }
 
-Header input {
-    padding-left: 0.5rem;
-}
-
-Header select {
-    padding-left: 0.3rem;
-    width: 4rem;
-}
-
-Header img {
-    height: 1.2rem;
-    padding: 0.26rem;
-    background-color: black;
-    border-radius: 2rem;
+.nav-in button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 18px;
+    transition: background-color .1s;
     cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
 }

@@ -31,3 +31,17 @@ Day Crystal
 Night Crystal
 Tarantula talisman
 Ring Of love
+
+over all hesap yaparken gereken değişkenler
+    Armor
+    weapon
+    talisman
+    quiver
+    bestiary
+    skill
+    godpot
+    pet{
+        gold collection
+        purse
+    }
+    slayer

@@ -1,4 +1,4 @@
-import colorMapRGB from "./colorMapRGB.js"
+import colorMapRGB from "./minecraftColorMapRGB.js"
 import { v4 as uuidv4 } from 'uuid';
 
 export default function SpanMaker({ styleCodeArray, text }) {
